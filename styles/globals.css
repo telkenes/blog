@@ -1,16 +1,233 @@
-html,
+/* * {
+    border-color: red;
+    border-width: 1px;
+    border-style: dashed;
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700');
+
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #191919;
+    color: #ffffff;
+    font-family: 'Open sans', sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: calc(80vh - 300px);
+    width: 80%;
+    margin: 150px auto 150px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10vh;
+    border-radius: 15px;
+}
+
+.header > * {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+    flex-basis: 100%;
+    align-items: center;
+}
+
+.pfp {
+    width: 40vh;
+    height: 40vh;
+    padding: 5vh;
+}
+
+.pfp-box-mobile {
+    display: none;
+}
+
+.name {
+    margin: 0 0 .5em 0;
+}
+
+.username {
+    color: hsl(208, 100%, 74%);
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: hsl(208, 100%, 74%);
+    text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 20px 0 20px 0;
+}
+
+.back {
+    background-color:rgba(0, 0, 0, 0.5);
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+}
+
+.back > a {
+    color: #ffffff;
+}
+
+.container {
+    justify-content: center;
+    width: 80vw;
+    padding: 0 0 10vh 0;
+    height: 100%;
+    margin: auto;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+li {
+    font-size: 1.3em;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 2em;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 2rem;
+    width: fit-content;
+}
+
+.card .card-header .card-header-title {
+    margin: 0 0 1rem 0;
+}
+
+
+#__next > * {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 5em;
+}
+
+/*
+    helper classes
+*/
+
+.title {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.subtitle {
+    font-weight: 500;
+    color: #808080;
+    font-size: 1.5rem;
+}
+
+.blog-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* landscape ipad size */
+@media screen and (max-width: 1024px) {
+    .header {
+        background-color: rgba(0,0,0,0);
+    }
+    .header > * {
+        align-items: flex-start;
+    }
+    .pfp {
+        width: 20vh;
+        height: 20vh;
+        padding: 0;
+    }
+    .pfp-box {
+        display: none;
+    }
+
+    .pfp-box-mobile {
+        display: flex;
+    }
+    .hero-body {
+        width: 80%;
+    }
+
+    h1 {
+        margin-top: 0.5rem;
+    }
+}
+
+/* potrait ipad size */
+@media screen and (max-width: 768px) { 
+    .header {
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    .blog-title {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        padding-right: 0;
+        width: 100%;
+    }
+    h1.name {
+        font-size: 2.25rem;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .hero-body > .title {
+        margin-top: 0;
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    li {
+        font-size: 1.25rem;
+    }
 }

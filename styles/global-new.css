@@ -1,0 +1,96 @@
+body {
+    background-color: rgba(0,0,0,0.9);
+    color: #ffffff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: calc(80vh - 300px);
+    width: 80%;
+    margin: 150px auto 150px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10vh;
+    border-radius: 15px;
+}
+
+.header > * {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+    flex-basis: 100%;
+}
+
+.pfp {
+    border-radius: 15px;
+    width: 40vh;
+    height: 40vh;
+    padding: 5vh;
+}
+
+.name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 0 .5em 0;
+}
+
+.username {
+    color: hsl(208, 100%, 74%);
+}
+
+.hero-body > .title {
+    font-size: 2rem;
+    margin: 0 0 0.5em 0;
+}
+
+.hero-body > .subtitle {
+    max-width: 75%;
+    margin: 0 0 0 0;
+}
+.hero-body > .subtitle > * {
+    font-size: 1.5rem;
+}
+
+a {
+    color: hsl(208, 100%, 74%);
+    text-decoration: none;
+}
+
+footer {
+    color: #ffffff;
+    background-color: #363636;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    width: 100%;
+    height: 5em;
+    position: absolute;
+    bottom: 0;
+}
+
+.container {
+    justify-content: center;
+    width: 80vw;
+    padding: 10vh;
+    height: 100%;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+.card {
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+
+#__next > * {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 5em;
+}
