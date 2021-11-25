@@ -1,0 +1,2 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QAs I have installed linux on my machines a few times, I already had a few bootable USBs with my distro of choice, Arch and one that had Ventoy, something which allows a USB to boot into multiple ISOs.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QWhile I do agree that idle RAM usage does not really matter, I felt it is quite weird how xfce (and KDE... ill explain in a while) both have the same IDLE ram usage but many say that GNOME bloated compared to xfce nooo don't use it adsjkfh34ro4rh3q.\\E$"}
