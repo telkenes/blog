@@ -130,7 +130,8 @@ li {
     border-radius: 15px;
     cursor: pointer;
     padding: 2rem;
-    width: fit-content;
+    min-width: fit-content;
+    max-width: 80%;
 }
 
 .card .card-header .card-header-title {
