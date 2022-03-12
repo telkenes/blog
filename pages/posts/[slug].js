@@ -32,7 +32,6 @@ export function getStaticProps({ params }) {
     let data = getData(params.slug)
     const renderer = {
         heading(text, level) {
-            const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
             return `
                   <h${level}>
                     ${'#'.repeat(level)}
