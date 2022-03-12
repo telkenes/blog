@@ -51,6 +51,12 @@ body {
     color: hsl(208, 100%, 74%);
 }
 
+.about-me {
+    font-size: 1.3em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
 h1 {
     font-size: 3.5rem;
     font-weight: 700;
