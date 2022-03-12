@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import marked from 'marked'
 export default function BlogCard({ title, description, date, time, slug }) {
     return (
         <Link as={`/posts/${slug}`} href={`/posts/[slug]`} key={`${slug}`}>
