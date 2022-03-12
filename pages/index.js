@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import BlogCard from '../components/blog-card'
 import Container from '../components/container'
 import getAllPosts from '../lib/post'
+import pfp from '../public/pfp.png'
 
 export default function Home({ allPosts, random }) {
     const blogList = allPosts.map(post => (
@@ -19,7 +21,9 @@ export default function Home({ allPosts, random }) {
             <div className="header">
                 <div>
                     <div className="pfp-box-mobile">
-                        <img className="pfp" src="./pfp.png"></img>
+                        <div className="pfp">
+                            <Image src={pfp} alt="Telk's profile picture" />
+                        </div>
                     </div>
                     <section className="hero is-dark">
                         <div className="hero-body">
@@ -38,7 +42,9 @@ export default function Home({ allPosts, random }) {
                     </section>
                 </div>
                 <div className="pfp-box">
-                    <img className="pfp" src="./pfp.png"></img>
+                    <div className="pfp">
+                        <Image src={pfp} alt="Telk's profile picture" />
+                    </div>
                 </div>
             </div>
             <Container>
