@@ -1,15 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import BlogCard from '../components/blog-card'
 import Container from '../components/container'
 import getAllPosts from '../lib/post'
 
 export default function Home({ allPosts, random }) {
-    let BlogList = []
-    allPosts.forEach(post => {
-        BlogList.push(<BlogCard title={post.title} description={post.short} date={post.date} time={post.time} slug={post.slug} key={post.slug}></BlogCard>)
-    });
+    const blogList = allPosts.map(post => (
+        <BlogCard
+            title={post.title}
+            description={post.short}
+            date={post.date}
+            time={post.time}
+            slug={post.slug}
+            key={post.slug}
+        />
+    ))
     return (
         <div>
             <div className="header">
@@ -39,7 +43,7 @@ export default function Home({ allPosts, random }) {
             </div>
             <Container>
                 <h1 className="title"># Posts</h1>
-                {BlogList}
+                {blogList}
             </Container>
         </div>
     )
