@@ -1,7 +1,6 @@
 import marked from 'marked'
 import { useRouter } from 'next/router'
 import Container from '../../components/container'
-import Footer from '../../components/footer'
 import Nav from '../../components/nav'
 import { getAllSlugs, getData } from '../../lib/post'
 
@@ -33,7 +32,6 @@ export function getStaticProps({ params }) {
     let data = getData(params.slug)
     const renderer = {
         heading(text, level) {
-            const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
             return `
                   <h${level}>
                     ${'#'.repeat(level)}
@@ -57,13 +55,11 @@ export function getStaticProps({ params }) {
 export function getStaticPaths() {
     let posts = getAllSlugs()
     return {
-        paths: posts.map(post => {
-            return {
-                params: {
-                    slug: post,
-                }
+        paths: posts.map(post => ({
+            params: {
+                slug: post,
             }
-        }),
+        })),
         fallback: false,
     }
 }
