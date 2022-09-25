@@ -116,12 +116,24 @@ pre > code {
     margin: auto;
 }
 
+.blog {
+    justify-content: center;
+    width: 50vw;
+    padding: 0 0 10vh 0;
+    height: 100%;
+    margin: auto;
+}
+
 p {
     font-size: 1.3em;
 }
 
 li {
     font-size: 1.3em;
+}
+li > ul > li {
+    font-size: 0.9em;
+    margin: 3px;
 }
 
 .card {

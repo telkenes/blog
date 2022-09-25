@@ -1,4 +1,4 @@
-import marked from 'marked'
+import { marked } from 'marked'
 import { useRouter } from 'next/router'
 import Container from '../../components/container'
 import Footer from '../../components/footer'
@@ -14,7 +14,7 @@ export default function Post({ post }) {
 
     return (
         <div>
-            <Container>
+            <div className="blog">
                 <Nav></Nav>
                 <h1 className="title blog-title">
                     {post.title}
@@ -24,7 +24,7 @@ export default function Post({ post }) {
                     - Estimate read time: {post.time}
                 </h3>
                 <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
-            </Container>
+            </div>
         </div>
     )
 }

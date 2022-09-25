@@ -24,11 +24,11 @@ export default function Home({ allPosts, random }) {
                                 {`And welcome to my ${random} blog`}
                             </h2>
                             <p className="about-me">
-                                <p>I am currently mainly working on <Link href="https://some-random-api.ml">Some Random API</Link>. I have other side projects such as <Link href="https://github.com/telkenes/mailcord">Mailcord</Link> (An email client which sends emails to a Discord channel through a weebhook) and <Link href="https://marketplace.visualstudio.com/items?itemName=Telk.necros">Necros</Link>, a Visual Studio Code theme made by me.</p>
+                                <p>I am currently mainly working on <Link href="https://some-random-api.ml">Some Random API</Link>. I have other side projects such as <Link href="https://github.com/telkenes/mailcord">Mailcord</Link> and <Link href="https://marketplace.visualstudio.com/items?itemName=Telk.necros">Necros</Link>.</p>
 
-                                <p>You can see my full project list <Link href="/projects">here.</Link></p>
+                                <p>You can see my full project list <Link href="/projects">here</Link> (Coming Soon)</p>
 
-                                <p>Things I enjoy: programming, watching <Link href="https://kitsu.io/users/telkenes">anime</Link>, pixel art, and music.</p>
+                                <p>Things I enjoy: programming, reading manga/manhwa/manhuas, pixel art, and music.</p>
                             </p>
                         </div>
                     </section>
