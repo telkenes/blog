@@ -19,6 +19,16 @@ export default function Home({ allPosts, random }) {
                     content="Just a random person on the internet talking about things"
                     key="desc"
                 />
+                <meta property="og:title" content="Telk's Blog" />
+                <meta
+                    property="og:description"
+                    content="Just a random person on the internet talking about things"
+                />
+                <meta
+                    property="og:image"
+                    content="https://blog.telky.ml/pfp.png"
+                />
+                <link rel="icon" href="/pfp.png"></link>
             </Head>
             <div className="header">
                 <div>

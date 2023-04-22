@@ -2,6 +2,7 @@ import { marked } from 'marked'
 import { useRouter } from 'next/router'
 import Container from '../../components/container'
 import Footer from '../../components/footer'
+import Head from 'next/head'
 import Nav from '../../components/nav'
 import { getAllSlugs, getData } from '../../lib/post'
 
@@ -14,6 +15,23 @@ export default function Post({ post }) {
 
     return (
         <div>
+            <Head>
+                <title>{post.title}</title>
+                <meta
+                    name="description"
+                    content={post.short}
+                    key="desc"
+                />
+                        <meta property="og:title" content={post.title} />
+        <meta
+          property="og:description"
+          content={post.short}
+        />
+                        <meta
+                    property="og:image"
+                    content="https://blog.telky.ml/pfp.png"
+                />
+            </Head>
             <div className="blog">
                 <Nav></Nav>
                 <h1 className="title blog-title">
@@ -46,6 +64,7 @@ export function getStaticProps({ params }) {
         props: {
             post: {
                 title: data.title,
+                short: data.short,
                 content: marked(data.content),
                 date: data.date,
                 time: data.time
