@@ -12,6 +12,14 @@ export default function Home({ allPosts, random }) {
     });
     return (
         <div>
+            <Head>
+                <title>Telk's Blog</title>
+                <meta
+                    name="description"
+                    content="Just a random person on the internet talking about things"
+                    key="desc"
+                />
+            </Head>
             <div className="header">
                 <div>
                     <div className="pfp-box-mobile">
